@@ -1,0 +1,247 @@
+/* Reseteo de márgenes y tamaños por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos básicos del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 30px;
+    text-align: left;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Espacio entre el título y los iconos */
+    align-items: center; /* Centra verticalmente */
+}
+
+.iconos {
+    display: flex;
+    gap: 10px; /* Espacio entre los iconos */
+    margin-right: 200px; /* Espacio a la derecha del grupo de iconos */
+}
+
+.icono {
+    width: 35px; /* Ajusta el tamaño según sea necesario */
+    height: 35px; /* Ajusta el tamaño según sea necesario */
+}
+
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+/* Estilo para la sección de destacados */
+.highlights {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.highlight-item {
+    position: relative;
+    width: 22%; /* Ajusta el ancho de los elementos */
+    text-align: center;
+}
+
+/* Estilo de las imágenes redondeadas con sombras */
+.highlight-item img {
+    width: 300px; /* Ancho específico para todas las imágenes */
+    height: 300px; /* Alto específico para todas las imágenes */
+    object-fit: cover; /* Asegura que la imagen se ajuste al tamaño recortando si es necesario */
+    border-radius: 50%; /* Convierte la imagen en un círculo */
+    display: block;
+    margin: 0 auto; /* Centra la imagen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade sombra a las imágenes */
+    transition: transform 0.3s ease; /* Transición suave para el hover */
+}
+
+.highlight-item img:hover {
+    transform: scale(1.05); /* Efecto de zoom al hacer hover */
+}
+
+.highlight-item h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el título sobre la imagen */
+    color: white;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente detrás del texto */
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+/* Estilo para la sección de Podocarpus */
+/* Contenedor general para la imagen y el texto */
+.podocarpus-section {
+    position: relative;
+    margin: 40px 0;
+    width: 100%;
+} 
+
+/* La imagen ocupa todo el ancho de la pantalla */
+.image-container {
+    position: relative;
+    width: 100%;
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;  /* La imagen ocupa todo el ancho del contenedor */
+    height: auto; /* Mantiene su proporción sin distorsión */
+    object-fit: cover; /* Se recorta para cubrir completamente el contenedor */
+    object-position: center; /* Centra la imagen dentro del contenedor */
+    max-height: 600px; /* Define la altura máxima de la imagen */
+}
+
+/* El cuadro de texto encima de la imagen */
+.podocarpus-text {
+    position: absolute;
+    top: 0%; /* Mueve el cuadro hacia arriba para sobresalir más de la imagen */
+    left: 5%; /* Ajusta la posición horizontal */
+    background-color: rgb(50, 168, 82); /* Fondo verde sólido */
+    padding: 50px;
+    color: white;
+    width: 45%; /* Fija el ancho del cuadro de texto */
+    height: 100%; /* Aumenta la altura del cuadro de texto por encima de la imagen */
+    z-index: 2; /* Mantiene el cuadro de texto por encima de la imagen */
+    text-align: left; /* Alinea el texto a la izquierda */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Añade sombra */
+}
+
+/* Tamaños del texto dentro del cuadro */
+.podocarpus-text h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.podocarpus-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Estilo para el botón en la sección Podocarpus */
+.podocarpus-text .button {
+    background-color: white;
+    color: #32a852;
+    padding: 15px 30px; /* Aumentar el tamaño del botón */
+    font-size: 1.2rem; /* Texto más grande en el botón */
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    transition: all 0.4s ease; /* Transición suave en hover */
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.podocarpus-text .button:hover {
+    background-color: #2b8e47;
+    color: white;
+    border: 2px solid #2b8e47;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para la sección Hero (imagen principal de fondo) */
+.hero-section {
+    background-image: url('images/loja_fondo.jpg'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover; /* Mantiene la imagen ajustada para cubrir la sección */
+    background-position: center; /* Centra la imagen */
+    width: 100%; /* Puedes cambiar el ancho si quieres algo fijo */
+    height: 700px; /* Ajusta el alto específico para la imagen */
+    position: relative; /* Necesario para posicionar el texto en la parte superior */
+}
+
+.hero-section h2 {
+    font-size: 2.5rem;
+    color: white; /* Asegura que las letras sean blancas */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la visibilidad */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente detrás del texto */
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 40px; /* Ajusta la distancia desde el borde superior de la imagen */
+    left: 25px; /* Ajusta la distancia desde el borde izquierdo de la imagen */
+}
+
+/* Sombra para mejorar la visibilidad del texto en la hero-section */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Oscurecer la imagen para resaltar el texto */
+}
+
+/* Desplazamiento suave al hacer clic en los enlaces */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Opcional: ajusta para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .hero-section h2 {
+        font-size: 1.8rem; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+        padding: 10px;
+    }
+
+    .hero-section {
+        height: 300px; /* Ajusta el tamaño de la imagen en pantallas pequeñas */
+    }
+
+    .podocarpus-text {
+        top: 0%; /* Ajusta la posición del cuadro de texto */
+        left: 5%;
+        width: 90%; /* Ajusta el ancho del cuadro de texto */
+        height: auto; /* Elimina el valor fijo de la altura */
+        padding: 20px;
+    }
+
+    .podocarpus-text h3 {
+        font-size: 1.8rem; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+    }
+
+    .podocarpus-text p {
+        font-size: 1rem; /* Tamaño de fuente más pequeño para el párrafo */
+    }
+}
